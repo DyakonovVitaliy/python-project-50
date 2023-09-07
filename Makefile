@@ -16,4 +16,7 @@ reinstall:
 gendiff:
 	poetry run gendiff
 
-.PHONY: install build publish package-install reinstall gendiff
+lint:
+	poetry run flake8 gendiff
+
+.PHONY: install build publish package-install reinstall gendiff lint
