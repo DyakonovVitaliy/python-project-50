@@ -1,7 +1,7 @@
 install:
 	poetry install
 
-build:
+build: check
 	poetry build
 
 publish:
@@ -23,6 +23,12 @@ test:
 	poetry run pytest
 
 test-coverage:
-	poetry run pytest --cov=gendiff --cov-report xml tests/
+	poetry run pytest --cov=gendiff
 
-.PHONY: install build publish package-install reinstall gendiff lint test
+selfcheck:
+	poetry check
+
+check: selfcheck test lint
+
+
+.PHONY: install build publish package-install reinstall gendiff lint test check selfcheck
