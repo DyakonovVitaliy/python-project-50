@@ -1,5 +1,4 @@
-from gendiff.diff_files_json import generate_diff_list
-
+from gendiff.diff_files_json import generate_diff_list                   
 
 def generate_diff(file1, file2):
     result_str = '{\n'
