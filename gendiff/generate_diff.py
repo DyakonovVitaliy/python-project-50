@@ -14,4 +14,6 @@ def generate_diff(file1, file2):
         result_str += k['key'] + ': '
         result_str += str(k['value']) + '\n'
     result_str += '}'
-    return result_str
+    result_str_1 = result_str.replace('True', 'true')
+    result_str_2 = result_str_1.replace('False', 'false')
+    return result_str_2
