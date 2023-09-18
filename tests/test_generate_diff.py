@@ -7,6 +7,9 @@ import pytest
     [
         pytest.param('tests/fixtures/file1.json',
                      'tests/fixtures/file2.json',
+                     'tests/fixtures/correct_result.txt'),
+        pytest.param('tests/fixtures/filepath1.yml',
+                     'tests/fixtures/filepath2.yml',
                      'tests/fixtures/correct_result.txt')
     ]
 )  
