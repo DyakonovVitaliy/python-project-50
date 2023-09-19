@@ -15,4 +15,5 @@ import pytest
 )  
 def test_diff(file1, file2, expected):
     result = open(expected, 'r').read()
+    print(generate_diff(file1, file2))
     assert generate_diff(file1, file2) == result

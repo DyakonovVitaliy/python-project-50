@@ -1,11 +1,7 @@
-import json
-
-
-def generate_diff_list(file1, file2):
+def generate_diff_list(first_file, second_file):
     result_list = []
-    first_file = json.load(open(file1))
-    second_file = json.load(open(file2))
-    list_everything_keys = sorted(list(set(first_file) | set(second_file)))
+    list_everything_keys = sorted(
+        list(set(first_file.keys()) | set(second_file.keys())))
     for key in list_everything_keys:
         if key not in first_file:
             result_list.append(
