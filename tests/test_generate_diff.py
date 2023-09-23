@@ -10,6 +10,9 @@ import pytest
                      'tests/fixtures/correct_result.txt'),
         pytest.param('tests/fixtures/filepath1.yml',
                      'tests/fixtures/filepath2.yml',
+                     'tests/fixtures/correct_result_tree.txt'),
+        pytest.param('tests/fixtures/file1.yml',
+                     'tests/fixtures/file2.yml',
                      'tests/fixtures/correct_result.txt')
     ]
 )  
