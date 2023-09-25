@@ -3,20 +3,30 @@ import pytest
 
 
 @pytest.mark.parametrize(
-    "file1, file2, expected",
+    "file1, file2, formater, expected",
     [
         pytest.param('tests/fixtures/file1.json',
                      'tests/fixtures/file2.json',
+                     'stylish',
                      'tests/fixtures/correct_result.txt'),
         pytest.param('tests/fixtures/filepath1.yml',
                      'tests/fixtures/filepath2.yml',
+                     'stylish',
                      'tests/fixtures/correct_result_tree.txt'),
         pytest.param('tests/fixtures/file1.yml',
                      'tests/fixtures/file2.yml',
-                     'tests/fixtures/correct_result.txt')
+                     'stylish',
+                     'tests/fixtures/correct_result.txt'),
+        pytest.param('tests/fixtures/filepath1.yml',
+                     'tests/fixtures/filepath2.yml',
+                     'plain',
+                     'tests/fixtures/correct_result_plain.txt'),
+        pytest.param('tests/fixtures/filepath1.json',
+                     'tests/fixtures/filepath2.json',
+                     'plain',
+                     'tests/fixtures/correct_result_plain.txt')
     ]
 )  
-def test_diff(file1, file2, expected):
+def test_diff(file1, file2, formater, expected):
     result = open(expected, 'r').read()
-    print(generate_diff(file1, file2))
-    assert generate_diff(file1, file2) == result
+    assert generate_diff(file1, file2, formater) == result
