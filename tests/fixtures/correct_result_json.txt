@@ -1,0 +1,116 @@
+[
+    {
+        "operator": "nested",
+        "key": "common",
+        "value": [
+            {
+                "operator": "add",
+                "key": "follow",
+                "value": false
+            },
+            {
+                "operator": "nothing",
+                "key": "setting1",
+                "value": "Value 1"
+            },
+            {
+                "operator": "remove",
+                "key": "setting2",
+                "value": 200
+            },
+            {
+                "operator": "changed",
+                "key": "setting3",
+                "old": true,
+                "new": null
+            },
+            {
+                "operator": "add",
+                "key": "setting4",
+                "value": "blah blah"
+            },
+            {
+                "operator": "add",
+                "key": "setting5",
+                "value": {
+                    "key5": "value5"
+                }
+            },
+            {
+                "operator": "nested",
+                "key": "setting6",
+                "value": [
+                    {
+                        "operator": "nested",
+                        "key": "doge",
+                        "value": [
+                            {
+                                "operator": "changed",
+                                "key": "wow",
+                                "old": "",
+                                "new": "so much"
+                            }
+                        ]
+                    },
+                    {
+                        "operator": "nothing",
+                        "key": "key",
+                        "value": "value"
+                    },
+                    {
+                        "operator": "add",
+                        "key": "ops",
+                        "value": "vops"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "operator": "nested",
+        "key": "group1",
+        "value": [
+            {
+                "operator": "changed",
+                "key": "baz",
+                "old": "bas",
+                "new": "bars"
+            },
+            {
+                "operator": "nothing",
+                "key": "foo",
+                "value": "bar"
+            },
+            {
+                "operator": "changed",
+                "key": "nest",
+                "old": {
+                    "key": "value"
+                },
+                "new": "str"
+            }
+        ]
+    },
+    {
+        "operator": "remove",
+        "key": "group2",
+        "value": {
+            "abc": 12345,
+            "deep": {
+                "id": 45
+            }
+        }
+    },
+    {
+        "operator": "add",
+        "key": "group3",
+        "value": {
+            "deep": {
+                "id": {
+                    "number": 45
+                }
+            },
+            "fee": 100500
+        }
+    }
+]

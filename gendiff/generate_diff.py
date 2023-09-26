@@ -3,6 +3,7 @@ from gendiff.define_extension import split_filename
 from gendiff.open_file import open_file
 from gendiff.formaters.stylish import render_stylish
 from gendiff.formaters.plain import render_plain
+from gendiff.formaters.json import render_json
 
 
 def generate_diff(file1, file2, formater='stylish'):
@@ -15,3 +16,5 @@ def generate_diff(file1, file2, formater='stylish'):
         return render_stylish(result_list)
     if formater == 'plain':
         return render_plain(result_list)
+    if formater == 'json':
+        return render_json(result_list)
