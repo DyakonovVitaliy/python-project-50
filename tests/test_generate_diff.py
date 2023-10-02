@@ -28,7 +28,11 @@ import pytest
         pytest.param('tests/fixtures/filepath1.json',
                      'tests/fixtures/filepath2.json',
                      'json',
-                     'tests/fixtures/correct_result_json.txt')
+                     'tests/fixtures/correct_result_json.txt'),
+        pytest.param('tests/fixtures/filepath1.json',
+                     'tests/fixtures/filepath2.yml',
+                     'json',
+                     'tests/fixtures/correct_result_json.txt')        
     ]
 )  
 def test_diff(file1, file2, formater, expected):
