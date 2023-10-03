@@ -1,9 +1,6 @@
 install:
 	poetry install
 
-build:
-	poetry build
-
 publish:
 	poetry publish --dry-run
 
@@ -25,9 +22,12 @@ test:
 test-coverage:
 	poetry run pytest --cov=gendiff --cov-report xml tests/
 
-check: selfcheck test lint
-
 selfcheck:
 	poetry check
 
+check: selfcheck test lint
+
+build:
+	poetry build
+	
 .PHONY: install build publish package-install reinstall gendiff lint test test-coverage check selfcheck
