@@ -28,8 +28,6 @@ test-coverage:
 selfcheck:
 	poetry check
 
-check: 
-	selfcheck test lint
-
+check: selfcheck test lint
 
 .PHONY: install build publish package-install reinstall gendiff lint test test-coverage check selfcheck
