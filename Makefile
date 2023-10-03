@@ -27,7 +27,6 @@ test-coverage:
 
 check: selfcheck test lint
 
-
 selfcheck:
 	poetry check
 
