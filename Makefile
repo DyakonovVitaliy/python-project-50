@@ -31,4 +31,4 @@ selfcheck:
 check: selfcheck test lint
 
 
-.PHONY: install build publish package-install reinstall gendiff lint test check selfcheck
+.PHONY: install build publish package-install reinstall gendiff lint test test-coverage check selfcheck
